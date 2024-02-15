@@ -10,9 +10,6 @@ const textBox = document.querySelector(".text-box textarea");  /* The text area 
 const sendButton = document.querySelector(".text-box span");   /* This is the green arrow that appears when you start typing in the text box */
 const textBoxHeight = textBox.scrollHeight;   // scrollHeight is the minimum height the element requires in order to fit all content in the viewport without using a vertical scrollbar 
 
-// node_modules\request-promise
-// C:\Users\asulak\ChatbotNodeJs\node_modules\request-promise
-
 // let declares a variable that can be reassigned another value
 // Both let and const are block-scoped, meaning they can be accessible within curly braces. Curly braces group blocks of code and execute them together. 
 
@@ -107,11 +104,6 @@ const generateResponse = async (chatElement) => {
     // Define the API request method, its headers (meta-data associated with request), the body (data sent by your client, say a browser, to the API) 
     messages.push({role: "user", content: typedMessage});
     console.log(messages)
-
-    // var options = {method: 'POST',
-    // uri: 'https://chatbotintermediary.azurewebsites.net/api/http_trigger?code=MPBmEhNQfbafCxNqA9nhoAE8-G0BsZ4dtTXuONAEPQt5AzFughGm1w==',
-    // body: messages,
-    // json: true};
     console.log(url)
 
     try {
@@ -146,28 +138,3 @@ const generateResponse = async (chatElement) => {
     sendButton.addEventListener("click", handleChat);
     closeChatbot.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
     openChatbot.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-
-// FUTURE DATABASE CALL - Anticipate executing this after the chat session ends 
-
-    // An asychrnouous nested function (still part of generateResponse) takes both outgoing and incoming chat messages. 
-
-//     const postMessagestoDatabase = async(request_message, response_message) => {n
-//         try {
-//             // The await keyword can only be used inside an async function. The await keyword makes the function pause the execution and wait for a resolved promise before it continues.  
-//             // With axios.post, the first parameter is the URL, the second parameter is the request body, and the 3rd parameter is the options.
-//             const response = await axios.post("http://localhost:8000/messages-to-database", {
-//         // When making a POST request, we include parameters in the request body 
-//         params: {
-//          request_message,
-//         response_message},
-//         // 
-//         headers: {
-//             "Access-Control-Allow-Credentials": true,  /* This header, when set to true, tells browsers to expose the response to our JS Code. Credentials include auth headers from the CORS preflight request */  
-//             'content-type': 'text/json'
-//         }});
-//         console.log(response)
-//     } catch (err) {
-//         console.error(err);
-//     }
-
-// postMessagestoDatabase()
