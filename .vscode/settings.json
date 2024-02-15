@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/fffd347c-2798-4007-ac23-62d8bfddbcbd/resourceGroups/CorporateServicesResourceGroup/providers/Microsoft.Web/sites/ChatbotSulak",
+    "appService.deploySubpath": "."
+}
