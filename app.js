@@ -116,7 +116,7 @@ const generateResponse = async (chatElement) => {
             },
             body: JSON.stringify(messages)
             }
-            const response = await fetch('https://chatbotintermediary.azurewebsites.net/api/http_trigger?code=MPBmEhNQfbafCxNqA9nhoAE8-G0BsZ4dtTXuONAEPQt5AzFughGm1w==', config)
+            const response = await fetch('https://chatbotintermediary.azurewebsites.net/api/http_trigger?code=MPBmEhNQfbafCxNqA9nhoAE8-G0BsZ4dtTXuONAEPQt5AzFughGm1w==', messages)
                 console.log(response)
                 messageElement.textContent = response;
                 messages.push({role: "assistant", content: response})
